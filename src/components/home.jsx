@@ -1,0 +1,20 @@
+import Navbar from "./Navbar"
+import './style.css'
+
+let Home = () => {
+    return (
+        <>
+            <div className="flex">
+                <h1 className="heading">Home</h1>
+                <Navbar />
+            </div>
+            <div className="main-content">
+                <h1 className="para-heading">Home</h1>
+                <p className="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum explicabo, ex ipsa at reiciendis aut aspernatur voluptatibus quam sint illo odit laboriosam voluptates minus alias unde ullam sed minima officia sit eveniet distinctio nulla. Laboriosam officia atque, pariatur perferendis nostrum est! Repellat quo laudantium, sunt culpa minus voluptatem sapiente fugiat nam deleniti sit saepe incidunt numquam? Excepturi nihil officia laboriosam? Modi mollitia qui quia velit officia ducimus, quisquam accusamus unde molestias nesciunt tempora eveniet! Facilis alias deleniti placeat, rerum similique nihil molestiae laborum tenetur iure minus exercitationem laudantium vero explicabo commodi nobis saepe quaerat repellendus eaque quis dolor dolore nisi dolorum neque sequi! Sint ipsa repudiandae animi iusto amet maxime repellat dolorem est eos reiciendis voluptate et alias sit, distinctio aliquam quibusdam nesciunt nemo impedit pariatur iure. Veniam natus ex ut quo odio similique. Beatae a fugit totam aliquam eligendi amet quo ipsam provident mollitia! Alias dolorem porro molestiae aut optio non corrupti dignissimos, officiis corporis earum! Est, sequi dolores fuga qui recusandae suscipit ipsum molestias corporis magni ipsam voluptatum quis quibusdam sapiente repudiandae alias voluptate obcaecati odio maiores, ipsa accusamus, quae nesciunt? Voluptate sapiente temporibus soluta voluptatum obcaecati. Beatae, eum, magnam itaque rem, perspiciatis dicta et impedit placeat dignissimos tenetur eligendi tempore. Esse, harum veritatis nesciunt earum fuga placeat saepe laboriosam ducimus dicta modi quos perspiciatis commodi dolorum tempora incidunt laudantium ipsam impedit facere. Mollitia sint eaque deleniti fugiat dicta ullam dolorem libero minima deserunt aliquid! Itaque blanditiis fugiat perferendis quibusdam reiciendis sapiente et, distinctio placeat numquam. Esse deleniti suscipit molestias. Reprehenderit totam praesentium quos voluptatibus, ab fuga impedit hic distinctio laudantium harum quas libero animi delectus maiores blanditiis recusandae tempora qui optio cumque atque cupiditate quod enim officiis perspiciatis. Sit enim praesentium quam natus, debitis magni neque maxime libero totam consequuntur numquam recusandae non id ad. Iusto veritatis at eius non odit quis praesentium tenetur cupiditate velit ducimus molestias, cum tempora! Ullam molestias quas beatae maiores a. Eos delectus officia quaerat voluptates laboriosam earum obcaecati expedita ab magni. Soluta sapiente id consectetur deserunt fuga suscipit, neque dolorem error placeat recusandae reiciendis commodi magnam vel, molestiae sit eaque impedit sunt iure repellendus voluptates in, eos adipisci! Labore ratione rem ut nulla nam dolorem, aspernatur veritatis nostrum, totam sunt beatae enim quia fugit laudantium ex, soluta tenetur. Odio, ut ullam. Iure, delectus iste odio harum labore esse optio sed recusandae rerum distinctio ab nihil voluptatum quaerat magnam nulla at libero facere. Quidem vitae quia atque iste! Corrupti error deleniti tempora, odit animi accusantium libero id similique aliquam debitis quisquam quae soluta nisi beatae non recusandae fuga eum incidunt eos voluptas? Non quas aperiam deserunt, beatae sit praesentium maxime sunt provident nostrum optio eaque ab eos voluptates! Corrupti, incidunt, provident, cum omnis autem mollitia non quam aliquid ipsam ut accusantium natus sit? Deleniti ullam vel maxime laudantium tenetur in perspiciatis quisquam dolore incidunt voluptate quam at eius, voluptas et ut? Nobis impedit voluptate, doloremque magnam ut maxime explicabo quibusdam pariatur illo praesentium vel quod? Provident rem voluptas accusamus, maiores similique iusto?</p>
+            </div>
+        </>
+
+    )
+}
+
+export default Home
