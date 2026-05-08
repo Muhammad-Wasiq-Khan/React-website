@@ -32,7 +32,7 @@ function UserPage() {
                 <div className="card">
                   <h2>Name : {v.name}</h2>
                   <h2>Email : {v.email}</h2>
-                  <button onClick={() => nav(`/users/${v.id}`)}>Open Details Page</button>
+                  <button onClick={() => nav(`/admin/users/${v.id}`)}>Open Details Page</button>
                 </div>
 
               </div>

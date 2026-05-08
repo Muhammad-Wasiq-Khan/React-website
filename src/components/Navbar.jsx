@@ -6,22 +6,20 @@ let Navbar = (props) => {
 
   return (
     <nav className="navbar">
-      <Link className={location.pathname == "/" ? "active act" : "link"} to={"/"}>
+      <Link className={location.pathname == "/user/home" ? "active act" : "link"} to={"/user/home"}>
         Home
       </Link>
-      <Link className={location.pathname == "/about" ? "active act" : "link"} to={"/about"}>
+      <Link className={location.pathname == "/user/about" ? "active act" : "link"} to={"/user/about"}>
         About
       </Link>
-      <Link className={location.pathname == "/contact" ? "active act" : "link"} to={"/contact"}>
+      <Link className={location.pathname == "/user/contact" ? "active act" : "link"} to={"/user/contact"}>
         Contact
       </Link>
-      <Link className={location.pathname == "/product" ? "active act" : "link"} to={"/product"}>
-      Products
+      <Link className={location.pathname == "/user/product" ? "active act" : "link"} to={"/user/product"}>
+        Products
       </Link>
-      <Link to={"/users"} className={location.pathname == "/users" ? "active act" : "link"}>User</Link>
-      <Link to={"/signIn"} className= "link">Sign In</Link>
-      <Link to={"/logIn"} className= "link">Log In</Link>
-
+      <Link className={location.pathname == "/admin/users" ? "active act" : "link"} to={"/admin/users"}>User</Link>
+      <Link  className="logout-btn" to={"/"} onClick={()=>{localStorage.removeItem("userRole");}}>Log Out</Link>
     </nav>
   );
 };

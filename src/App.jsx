@@ -8,18 +8,40 @@ import UserPage from "./components/UserPage"
 import UserPageDetails from "./components/userPageDetail"
 import SignIn from "./components/signin"
 import LogIn from "./components/logIn"
+import ProtectedRouter from "./components/protectdRouter"
+import AdminPage from "./components/admin"
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/about" element={<About />}></Route>
-      <Route path="/contact" element={<Contact />}></Route>
-      <Route path="/product" element={<Products />}></Route>
-      <Route path="/product/:productId" element={<ProductDetails />}></Route>
-      <Route path="/users" element={<UserPage />}></Route>
-      <Route path="/users/:userIdDetails" element={<UserPageDetails />}></Route>
+      {/* <Route path="/" element={<Home />}></Route> */}
+      <Route path="/" element={<LogIn />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>
-      <Route path="/logIn" element={<LogIn />}></Route>
+
+      <Route element={<ProtectedRouter allowedRole={["user"]} />}>
+      <Route path="/user/about" element={<About />}></Route>
+      </Route>
+      <Route element={<ProtectedRouter allowedRole={["user"]} />}>
+      <Route path="/user/contact" element={<Contact />}></Route>
+      </Route>
+      <Route element={<ProtectedRouter allowedRole={["user"]} />}>
+      <Route path="/user/product" element={<Products />}></Route>
+      </Route>
+      <Route element={<ProtectedRouter allowedRole={["user"]} />}>
+      <Route path="/product/:productId" element={<ProductDetails />}></Route>
+      </Route>
+      <Route element={<ProtectedRouter allowedRole={["user"]} />}>
+        <Route path="/user/home" element={<Home />}></Route>
+      </Route>
+
+      <Route element={<ProtectedRouter allowedRole={["admin"]} />}>
+      <Route path="/admin/users" element={<UserPage />}></Route>
+      </Route>
+      <Route element={<ProtectedRouter allowedRole={["admin"]} />}>
+      <Route path="/admin/users/:userIdDetails" element={<UserPageDetails />}></Route>
+      </Route>
+      <Route element={<ProtectedRouter allowedRole={["admin"]} />}>
+        <Route path="/admin/dashoard" element={<AdminPage />} />
+      </Route>
 
       <Route path="*" element={<h1>404 page not found</h1>}></Route>
     </Routes>
