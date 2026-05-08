@@ -8,11 +8,13 @@ let ProductDetails = () => {
   let params = useParams();
   console.log(params.productId);
   let [ProductDetails, setProductDetails] = useState();
+  let [loading,setloading]=useState(true)
   useEffect(() => {
     axios
       .get(`https://fakestoreapi.com/products/${params.productId}`)
       .then((response) => {
         setProductDetails(response.data)
+        setloading(false)
       });
   }, []);
   return (
@@ -21,7 +23,11 @@ let ProductDetails = () => {
         <h1 className="heading"> Product Details</h1>
         <Navbar />
       </div>
-      <div className="single-product">
+      {
+        loading?
+        <h1>loading</h1>
+        :
+           <div className="single-product">
         <div className="product-container">
           <div className="product-image">
             <img src={ProductDetails.image} alt="" />
@@ -43,7 +49,10 @@ let ProductDetails = () => {
           </div>
         </div>
       </div>
+      }
+   
     </>
   );
 };
 export default ProductDetails;
+
